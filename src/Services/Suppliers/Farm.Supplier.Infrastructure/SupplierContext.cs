@@ -1,14 +1,13 @@
 ﻿using Farm.Infrastructure.Seedwork;
 using Farm.Suppliers.Infrastructure.AggregatesModel.SupplierAggregate;
-using Farm.Suppliers.Infrastructure.EntityConfigurations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Data;
 using System.Threading;
 using System.Threading.Tasks;
+using Farm.Suppliers.Infrastructure.EntityConfigurations;
 
 namespace Farm.Suppliers.Infrastructure
 {

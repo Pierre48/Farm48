@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_farm.93710462.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Front" t="Include">
+        <e p="Farm.UI" t="IncludeRecursive">
+          <e p=".gitignore" t="Include" />
+          <e p="ClientApp" t="Include">
+            <e p=".editorconfig" t="Include" />
+            <e p=".gitignore" t="Include" />
+            <e p="README.md" t="Include" />
+            <e p="angular.json" t="Include" />
+            <e p="browserslist" t="Include" />
+            <e p="e2e" t="Include">
+              <e p="protractor.conf.js" t="Include" />
+              <e p="src" t="Include">
+                <e p="app.e2e-spec.ts" t="Include" />
+                <e p="app.po.ts" t="Include" />
+              </e>
+              <e p="tsconfig.e2e.json" t="Include" />
+            </e>
+            <e p="package-lock.json" t="Include" />
+            <e p="package.json" t="Include" />
+            <e p="src" t="Include">
+              <e p="app" t="Include">
+                <e p="app.component.html" t="Include" />
+                <e p="app.component.ts" t="Include" />
+                <e p="app.module.ts" t="Include" />
+                <e p="app.server.module.ts" t="Include" />
+                <e p="counter" t="Include">
+                  <e p="counter.component.html" t="Include" />
+                  <e p="counter.component.spec.ts" t="Include" />
+                  <e p="counter.component.ts" t="Include" />
+                </e>
+                <e p="fetch-data" t="Include">
+                  <e p="fetch-data.component.html" t="Include" />
+                  <e p="fetch-data.component.ts" t="Include" />
+                </e>
+                <e p="home" t="Include">
+                  <e p="home.component.html" t="Include" />
+                  <e p="home.component.ts" t="Include" />
+                </e>
+                <e p="nav-menu" t="Include">
+                  <e p="nav-menu.component.css" t="Include" />
+                  <e p="nav-menu.component.html" t="Include" />
+                  <e p="nav-menu.component.ts" t="Include" />
+                </e>
+              </e>
+              <e p="assets" t="Include">
+                <e p=".gitkeep" t="Include" />
+              </e>
+              <e p="environments" t="Include">
+                <e p="environment.prod.ts" t="Include" />
+                <e p="environment.ts" t="Include" />
+              </e>
+              <e p="index.html" t="Include" />
+              <e p="karma.conf.js" t="Include" />
+              <e p="main.ts" t="Include" />
+              <e p="polyfills.ts" t="Include" />
+              <e p="styles.css" t="Include" />
+              <e p="test.ts" t="Include" />
+              <e p="tsconfig.app.json" t="Include" />
+              <e p="tsconfig.server.json" t="Include" />
+              <e p="tsconfig.spec.json" t="Include" />
+              <e p="tslint.json" t="Include" />
+            </e>
+            <e p="tsconfig.json" t="Include" />
+            <e p="tslint.json" t="Include" />
+          </e>
+          <e p="Controllers" t="Include">
+            <e p="WeatherForecastController.cs" t="Include" />
+          </e>
+          <e p="Farm.UI.csproj" t="IncludeRecursive" />
+          <e p="Pages" t="Include">
+            <e p="Error.cshtml" t="Include" />
+            <e p="Error.cshtml.cs" t="Include" />
+            <e p="_ViewImports.cshtml" t="Include" />
+          </e>
+          <e p="Program.cs" t="Include" />
+          <e p="Properties" t="Include">
+            <e p="launchSettings.json" t="Include" />
+          </e>
+          <e p="Startup.cs" t="Include" />
+          <e p="WeatherForecast.cs" t="Include" />
+          <e p="appsettings.Development.json" t="Include" />
+          <e p="appsettings.json" t="Include" />
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netcoreapp3.1" t="Include">
+                <e p="Farm.UI.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="wwwroot" t="Include">
+            <e p="favicon.ico" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Infrastructure" t="Include">
+        <e p="Farm.Infrastructure" t="IncludeRecursive">
+          <e p="Farm.Infrastructure.csproj" t="IncludeRecursive" />
+          <e p="Seedwork" t="Include">
+            <e p="Entity.cs" t="Include" />
+            <e p="IAggregateRoot.cs" t="Include" />
+            <e p="IRepository.cs" t="Include" />
+            <e p="IUnitOfWork.cs" t="Include" />
+          </e>
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Farm.Infrastructure.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Services" t="Include">
+        <e p="Animal" t="Include" />
+        <e p="Animals/Farm.Animal.Infrastructure" t="IncludeRecursive">
+          <e p="Class1.cs" t="Include" />
+          <e p="Farm.Animal.Infrastructure.csproj" t="IncludeRecursive" />
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Farm.Animal.Infrastructure.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Animals/Farm.Animal.WebAPI" t="IncludeRecursive">
+          <e p="Controllers" t="Include">
+            <e p="WeatherForecastController.cs" t="Include" />
+          </e>
+          <e p="Farm.Animal.WebAPI.csproj" t="IncludeRecursive" />
+          <e p="Program.cs" t="Include" />
+          <e p="Properties" t="Include">
+            <e p="launchSettings.json" t="Include" />
+          </e>
+          <e p="Startup.cs" t="Include" />
+          <e p="WeatherForecast.cs" t="Include" />
+          <e p="appsettings.Development.json" t="Include" />
+          <e p="appsettings.json" t="Include" />
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netcoreapp3.1" t="Include">
+                <e p="Farm.Animal.WebAPI.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Billing" t="Include">
+          <e p="Farm.Billing.Infrastructure" t="IncludeRecursive">
+            <e p="Class1.cs" t="Include" />
+            <e p="Farm.Billing.Infrastructure.csproj" t="IncludeRecursive" />
+            <e p="bin" t="ExcludeRecursive" />
+            <e p="obj" t="ExcludeRecursive">
+              <e p="Debug" t="Include">
+                <e p="netstandard2.0" t="Include">
+                  <e p="Farm.Billing.Infrastructure.AssemblyInfo.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Farm.Billing.WebAPI" t="IncludeRecursive">
+            <e p="Controllers" t="Include">
+              <e p="WeatherForecastController.cs" t="Include" />
+            </e>
+            <e p="Farm.Billing.WebAPI.csproj" t="IncludeRecursive" />
+            <e p="Program.cs" t="Include" />
+            <e p="Properties" t="Include">
+              <e p="launchSettings.json" t="Include" />
+            </e>
+            <e p="Startup.cs" t="Include" />
+            <e p="WeatherForecast.cs" t="Include" />
+            <e p="appsettings.Development.json" t="Include" />
+            <e p="appsettings.json" t="Include" />
+            <e p="bin" t="ExcludeRecursive" />
+            <e p="obj" t="ExcludeRecursive">
+              <e p="Debug" t="Include">
+                <e p="netcoreapp3.1" t="Include">
+                  <e p="Farm.Billing.WebAPI.AssemblyInfo.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Suppliers" t="Include">
+          <e p="Farm.Supplier.Infrastructure" t="IncludeRecursive">
+            <e p="AggregatesModel" t="Include">
+              <e p="SupplierAggregate" t="Include">
+                <e p="ISupplierRepository.cs" t="Include" />
+                <e p="Supplier.cs" t="Include" />
+              </e>
+            </e>
+            <e p="EntityConfigurations" t="Include">
+              <e p="SupplierEntityTypeConfiguration.cs" t="Include" />
+            </e>
+            <e p="Farm.Supplier.Infrastructure.csproj" t="IncludeRecursive" />
+            <e p="Repositories" t="Include">
+              <e p="SupplierRepository.cs" t="Include" />
+            </e>
+            <e p="SupplierContext.cs" t="Include" />
+            <e p="bin" t="ExcludeRecursive" />
+            <e p="obj" t="ExcludeRecursive">
+              <e p="Debug" t="Include">
+                <e p="netstandard2.0" t="Include">
+                  <e p="Farm.Supplier.Infrastructure.AssemblyInfo.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Farm.Supplier.WebAPI" t="IncludeRecursive">
+            <e p="AutoMapperProfile.cs" t="Include" />
+            <e p="Controllers" t="Include">
+              <e p="SupplierController.cs" t="Include" />
+            </e>
+            <e p="Dockerfile" t="Include" />
+            <e p="Farm.Supplier.API.xml" t="Include" />
+            <e p="Farm.Supplier.WebAPI.csproj" t="IncludeRecursive" />
+            <e p="Farm.Supplier.WebAPI.xml" t="Include" />
+            <e p="Models" t="Include">
+              <e p="SupplierModel.cs" t="Include" />
+            </e>
+            <e p="Program.cs" t="Include" />
+            <e p="Properties" t="Include">
+              <e p="launchSettings.json" t="Include" />
+            </e>
+            <e p="Startup.cs" t="Include" />
+            <e p="appsettings.Development.json" t="Include" />
+            <e p="appsettings.json" t="Include" />
+            <e p="bin" t="ExcludeRecursive" />
+            <e p="obj" t="ExcludeRecursive">
+              <e p="Debug" t="Include">
+                <e p="netcoreapp3.1" t="Include">
+                  <e p="Farm.Supplier.WebAPI.AssemblyInfo.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="farm.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

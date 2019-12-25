@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using Farm.Supplier.WebAPI.Models;
+using Farm.Suppliers.WebAPI.Models;
 using Farm.Suppliers.Infrastructure.AggregatesModel.SupplierAggregate;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -37,9 +37,9 @@ namespace Farm.Suppliers.WebAPI.Controllers
         [HttpPost]
         public SupplierModel Add(SupplierModel supplierModel)
         {
-            var supplier = mapper.Map<Supplier>(supplierModel);
-            repository.Add(supplier);
-            return supplier;
+            var supplier = mapper.Map<Infrastructure.AggregatesModel.SupplierAggregate.Supplier>(supplierModel);
+            var entity = repository.Add(supplier);
+            return mapper.Map<SupplierModel>(entity);
         }
     }
 }

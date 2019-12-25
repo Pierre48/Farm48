@@ -6,6 +6,8 @@ using System.Reflection;
 using System.Threading.Tasks;
 using AutoMapper;
 using Farm.Suppliers.Infrastructure;
+using Farm.Suppliers.Infrastructure.AggregatesModel.SupplierAggregate;
+using Farm.Suppliers.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -33,13 +35,14 @@ namespace Farm.Suppliers.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddTransient<ISupplierRepository,SupplierRepository>();
             services.AddDbContext<SupplierContext>(options =>
             {
                 options.UseNpgsql(Configuration.GetValue<string>("ConnectionString"));
             });
             AddSwagger(services);
             AddSwaggerGen(services);
-            services.AddAutoMapper();
+            services.AddAutoMapper(typeof(Startup).Assembly);
         }
 
         private void AddSwaggerGen(IServiceCollection services)

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Farm.Suppliers.Infrastructure.EntityConfigurations
 {
-    class SupplierEntityTypeConfiguration : IEntityTypeConfiguration<Supplier>
+    internal class SupplierEntityTypeConfiguration : IEntityTypeConfiguration<Supplier>
     {
         public void Configure(EntityTypeBuilder<Supplier> SupplierConfiguration)
         {

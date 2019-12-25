@@ -59,7 +59,7 @@ namespace Farm.Suppliers.Infrastructure.Repositories
 
         public async Task<IEnumerable<Supplier>> GetAllAsync()
         {
-            return await _context.Suppliers.g
+            return await _context.Suppliers.ToListAsync();
         }
     }
 }
