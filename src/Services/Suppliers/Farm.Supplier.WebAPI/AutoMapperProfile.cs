@@ -12,8 +12,9 @@ namespace Farm.Suppliers.WebAPI
     {
         public AutoMappingProfiles()
         {
-            CreateMap<Supplier, SupplierModel>()
-                .ReverseMap();
+            CreateMap<Supplier, SupplierModel>();
+            CreateMap<SupplierModel, Supplier>().ForMember(x => x.Id, opt => opt.Ignore());
+
         }
     }
 }

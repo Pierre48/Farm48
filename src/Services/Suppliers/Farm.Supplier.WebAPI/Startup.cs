@@ -115,7 +115,7 @@ namespace Farm.Suppliers.WebAPI
             UpdateDatabase(app);
         }
 
-        private static void UpdateDatabase(IApplicationBuilder app)
+        private void UpdateDatabase(IApplicationBuilder app)
         {
             using (var serviceScope = app.ApplicationServices
                 .GetRequiredService<IServiceScopeFactory>()

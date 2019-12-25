@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_farm.93710462.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_farm.93710462.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="Front" t="Include">
         <e p="Farm.UI" t="IncludeRecursive">
@@ -91,6 +91,7 @@
             <e p="Debug" t="Include">
               <e p="netcoreapp3.1" t="Include">
                 <e p="Farm.UI.AssemblyInfo.cs" t="Include" />
+                <e p="Farm.UI.RazorAssemblyInfo.cs" t="Include" />
               </e>
             </e>
           </e>
@@ -202,6 +203,11 @@
               <e p="SupplierEntityTypeConfiguration.cs" t="Include" />
             </e>
             <e p="Farm.Supplier.Infrastructure.csproj" t="IncludeRecursive" />
+            <e p="Migrations" t="Include">
+              <e p="20191225200421_InitialCreate.Designer.cs" t="Include" />
+              <e p="20191225200421_InitialCreate.cs" t="Include" />
+              <e p="SupplierContextModelSnapshot.cs" t="Include" />
+            </e>
             <e p="Repositories" t="Include">
               <e p="SupplierRepository.cs" t="Include" />
             </e>
@@ -209,7 +215,7 @@
             <e p="bin" t="ExcludeRecursive" />
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
-                <e p="netstandard2.0" t="Include">
+                <e p="netcoreapp3.1" t="Include">
                   <e p="Farm.Supplier.Infrastructure.AssemblyInfo.cs" t="Include" />
                 </e>
               </e>
@@ -235,6 +241,9 @@
             <e p="appsettings.Development.json" t="Include" />
             <e p="appsettings.json" t="Include" />
             <e p="bin" t="ExcludeRecursive" />
+            <e p="mono_crash.mem.16281.1.blob" t="Include" />
+            <e p="mono_crash.mem.16815.1.blob" t="Include" />
+            <e p="mono_crash.mem.17016.1.blob" t="Include" />
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
                 <e p="netcoreapp3.1" t="Include">

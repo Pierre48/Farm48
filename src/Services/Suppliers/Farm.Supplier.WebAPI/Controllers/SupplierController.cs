@@ -35,11 +35,22 @@ namespace Farm.Suppliers.WebAPI.Controllers
         }
 
         [HttpPost]
-        public SupplierModel Add(SupplierModel supplierModel)
+        public async Task<SupplierModel> AddOrUpdate(SupplierModel supplierModel)
         {
-            var supplier = mapper.Map<Infrastructure.AggregatesModel.SupplierAggregate.Supplier>(supplierModel);
-            var entity = repository.Add(supplier);
-            return mapper.Map<SupplierModel>(entity);
+            var supplierInDb = await repository.GetAsync(supplierModel.Id);
+            Supplier @new;
+            if (supplierInDb == null)
+            {
+                var supplier = mapper.Map<Supplier>(supplierModel);
+                @new = repository.Add(supplier);
+            }
+            else
+            {
+                @new= mapper.Map<SupplierModel, Supplier>(supplierModel, supplierInDb);
+                repository.Update(supplierInDb);
+            }
+            repository.UnitOfWork.SaveChangesAsync();
+            return mapper.Map<SupplierModel>(@new);
         }
     }
 }
