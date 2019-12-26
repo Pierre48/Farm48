@@ -192,7 +192,7 @@
           </e>
         </e>
         <e p="Suppliers" t="Include">
-          <e p="Farm.Supplier.Infrastructure" t="IncludeRecursive">
+          <e p="Farm.Suppliers.Infrastructure" t="IncludeRecursive">
             <e p="AggregatesModel" t="Include">
               <e p="SupplierAggregate" t="Include">
                 <e p="ISupplierRepository.cs" t="Include" />
@@ -202,7 +202,7 @@
             <e p="EntityConfigurations" t="Include">
               <e p="SupplierEntityTypeConfiguration.cs" t="Include" />
             </e>
-            <e p="Farm.Supplier.Infrastructure.csproj" t="IncludeRecursive" />
+            <e p="Farm.Suppliers.Infrastructure.csproj" t="IncludeRecursive" />
             <e p="Migrations" t="Include">
               <e p="20191225200421_InitialCreate.Designer.cs" t="Include" />
               <e p="20191225200421_InitialCreate.cs" t="Include" />
@@ -216,20 +216,21 @@
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
                 <e p="netcoreapp3.1" t="Include">
-                  <e p="Farm.Supplier.Infrastructure.AssemblyInfo.cs" t="Include" />
+                  <e p="Farm.Suppliers.Infrastructure.AssemblyInfo.cs" t="Include" />
                 </e>
               </e>
             </e>
           </e>
-          <e p="Farm.Supplier.WebAPI" t="IncludeRecursive">
+          <e p="Farm.Suppliers.WebAPI" t="IncludeRecursive">
             <e p="AutoMapperProfile.cs" t="Include" />
             <e p="Controllers" t="Include">
               <e p="SupplierController.cs" t="Include" />
             </e>
             <e p="Dockerfile" t="Include" />
-            <e p="Farm.Supplier.API.xml" t="Include" />
-            <e p="Farm.Supplier.WebAPI.csproj" t="IncludeRecursive" />
             <e p="Farm.Supplier.WebAPI.xml" t="Include" />
+            <e p="Farm.Suppliers.API.xml" t="Include" />
+            <e p="Farm.Suppliers.WebAPI.csproj" t="IncludeRecursive" />
+            <e p="Farm.Suppliers.WebAPI.xml" t="Include" />
             <e p="Models" t="Include">
               <e p="SupplierModel.cs" t="Include" />
             </e>
@@ -241,13 +242,11 @@
             <e p="appsettings.Development.json" t="Include" />
             <e p="appsettings.json" t="Include" />
             <e p="bin" t="ExcludeRecursive" />
-            <e p="mono_crash.mem.16281.1.blob" t="Include" />
-            <e p="mono_crash.mem.16815.1.blob" t="Include" />
-            <e p="mono_crash.mem.17016.1.blob" t="Include" />
+            <e p="mono_crash.mem.17201.1.blob" t="Include" />
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
                 <e p="netcoreapp3.1" t="Include">
-                  <e p="Farm.Supplier.WebAPI.AssemblyInfo.cs" t="Include" />
+                  <e p="Farm.Suppliers.WebAPI.AssemblyInfo.cs" t="Include" />
                 </e>
               </e>
             </e>

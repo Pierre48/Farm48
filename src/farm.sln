@@ -27,9 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Farm.Animal.Infrastructure"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Farm.Animal.WebAPI", "Services\Animals\Farm.Animal.WebAPI\Farm.Animal.WebAPI.csproj", "{4CA322CB-5F38-4FD4-B118-7C568A4F1B2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farm.Supplier.Infrastructure", "Services\Suppliers\Farm.Supplier.Infrastructure\Farm.Supplier.Infrastructure.csproj", "{BB5BBE1E-E38A-4B79-A549-9F15F1BBF000}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farm.Suppliers.Infrastructure", "Services\Suppliers\Farm.Suppliers.Infrastructure\Farm.Suppliers.Infrastructure.csproj", "{BB5BBE1E-E38A-4B79-A549-9F15F1BBF000}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farm.Supplier.WebAPI", "Services\Suppliers\Farm.Supplier.WebAPI\Farm.Supplier.WebAPI.csproj", "{47CC3863-20ED-441C-AC87-FEF46255A463}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farm.Suppliers.WebAPI", "Services\Suppliers\Farm.Suppliers.WebAPI\Farm.Suppliers.WebAPI.csproj", "{47CC3863-20ED-441C-AC87-FEF46255A463}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

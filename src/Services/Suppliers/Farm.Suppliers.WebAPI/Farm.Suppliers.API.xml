@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>Farm.Supplier.WebAPI</name>
+        <name>Farm.Suppliers.WebAPI</name>
     </assembly>
     <members>
     </members>

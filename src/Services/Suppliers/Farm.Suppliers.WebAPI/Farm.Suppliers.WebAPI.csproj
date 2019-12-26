@@ -27,11 +27,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Farm.Supplier.Infrastructure\Farm.Supplier.Infrastructure.csproj" />
+    <ProjectReference Include="..\Farm.Suppliers.Infrastructure\Farm.Suppliers.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Farm.Supplier.WebAPI.xml">
+    <None Update="Farm.Suppliers.WebAPI.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
