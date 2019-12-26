@@ -61,5 +61,11 @@ namespace Farm.Suppliers.Infrastructure.Repositories
         {
             return await _context.Suppliers.ToListAsync();
         }
+
+        public void Delete(int id)
+        {
+            var entity = _context.FindAsync<Supplier>(id);
+            _context.Remove(entity);
+        }
     }
 }

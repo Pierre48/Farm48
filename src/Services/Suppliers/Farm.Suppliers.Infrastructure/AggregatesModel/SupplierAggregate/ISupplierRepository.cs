@@ -14,5 +14,6 @@ namespace Farm.Suppliers.Infrastructure.AggregatesModel.SupplierAggregate
 
         Task<Supplier> GetAsync(int id);
         Task<IEnumerable<Supplier>> GetAllAsync();
+        void Delete(int id);
     }
 }
