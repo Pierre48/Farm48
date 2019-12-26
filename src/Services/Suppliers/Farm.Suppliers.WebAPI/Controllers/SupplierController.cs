@@ -38,6 +38,7 @@ namespace Farm.Suppliers.WebAPI.Controllers
         public async void Delete(int id)
         {
             repository.Delete(id);
+            repository.UnitOfWork.SaveChangesAsync();
         }
 
         [HttpPost]
