@@ -33,6 +33,12 @@ namespace Farm.Suppliers.WebAPI.Controllers
             var suppliers = await repository.GetAllAsync();
             return suppliers.Select(s => mapper.Map<SupplierModel>(s));
         }
+        
+        [HttpDelete]
+        public async void Delete(int id)
+        {
+            repository.Delete(id);
+        }
 
         [HttpPost]
         public async Task<SupplierModel> AddOrUpdate(SupplierModel supplierModel)
