@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  postgres:
+    restart: always
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=Michelin/1 
+      - POSTGRES_DB=farm
+    volumes:
+      - /srv/docker/postgresql:/var/lib/postgresql
+  backend-suppliers:
+    build:
+      context: .
+      dockerfile: Services/Suppliers/Farm.Suppliers.WebAPI/Dockerfile
+      args:
+        buildno: 1
