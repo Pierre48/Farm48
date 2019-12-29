@@ -41,9 +41,25 @@ namespace Farm.Suppliers.WebAPI
                 var dbServer = Environment.GetEnvironmentVariable("DB_SERVER") ?? "127.0.0.1";
                 options.UseNpgsql($"Server={dbServer};Port=5432;Database=farm;User Id=postgres;Password=Michelin/1;");
             });
+            AddCors(services);
             AddSwagger(services);
             AddSwaggerGen(services);
             services.AddAutoMapper(typeof(Startup).Assembly);
+        }
+
+        private void AddCors(IServiceCollection services)
+        {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("FrontOrigins",
+                    builder =>
+                    {
+                        builder
+                            .WithOrigins("http://127.0.0.1:4200", "http://localhost:4200")
+                            .AllowAnyMethod()
+                            .AllowAnyHeader();
+                    });
+            });
         }
 
         private void AddSwaggerGen(IServiceCollection services)
@@ -94,6 +110,8 @@ namespace Farm.Suppliers.WebAPI
 
             app.UseRouting();
 
+            app.UseCors("FrontOrigins");
+            
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

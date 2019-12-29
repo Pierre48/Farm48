@@ -28,6 +28,22 @@ namespace Farm.Billing.WebAPI
             services.AddControllers();
         }
 
+        private void AddCors(IServiceCollection services)
+        {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("FrontOrigins",
+                    builder =>
+                    {
+                        builder
+                            .WithOrigins("http://127.0.0.1:4200", "http://localhost:4200")
+                            .AllowAnyMethod()
+                            .AllowAnyHeader();
+                    });
+            });
+        }
+
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

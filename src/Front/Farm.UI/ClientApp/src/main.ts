@@ -9,7 +9,9 @@ export function getBaseUrl() {
 }
 
 const providers = [
-  { provide: 'BASE_URL', useFactory: getBaseUrl, deps: [] }
+  { provide: 'SUPPLIER_URL', useValue: "http://localhost:8001/api/v1/" },
+  { provide: 'BILLING_URL', useValue: "http://localhost:8002/api/v1/" },
+  { provide: 'ANIMAL_URL', useValue: "http://localhost:8003/api/v1/" }
 ];
 
 if (environment.production) {

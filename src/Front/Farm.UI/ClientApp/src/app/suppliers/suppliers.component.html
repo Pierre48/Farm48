@@ -1,0 +1,32 @@
+<h1 id="tableLabel">Fournisseurs</h1>
+
+<p>Cette page contient la liste des fournisseurs connus de la ferme</p>
+
+<p *ngIf="!suppliers"><em>Loading...</em></p>
+
+
+<img src="assets/img/add.png" height="32" width="32" (click)="this.add()" style="float: right;margin: 5px;" />
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="suppliers">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Nom long</th>
+      <th>Adresse</th>
+      <th>Code postal</th>
+      <th>Ville</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let supplier of suppliers">
+      <td>{{ supplier.shortName }}</td>
+      <td>{{ supplier.longName }}</td>
+      <td>{{ supplier.addressLine1 }}</td>
+      <td>{{ supplier.zipCode }}</td>
+      <td>{{ supplier.city }}</td>
+      <td>
+        <img src="assets/img/edit.png" style="margin: 5px;" height="32" width="32" (click)="this.edit(supplier)" />&nbsp;
+        <img src="assets/img/delete.png" style="margin: 5px;" height="32" width="32" (click)="this.delete(supplier)" />
+      </td>
+    </tr>
+  </tbody>
+</table>
