@@ -15,6 +15,17 @@ services:
       db:
         aliases:
           - database
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    volumes:
+      - ./rabbitmq-isolated.conf:/etc/rabbitmq/rabbitmq.config
+    networks:
+      db:
+        aliases:
+          - rabbitmq
   backend-suppliers:
     build:
       context: .
@@ -26,6 +37,7 @@ services:
       - ASPNETCORE_URLS=http://+:8001
     depends_on: 
       - postgres
+      - rabbitmq
     ports:
       - "8001:8001"
     networks:
@@ -43,6 +55,7 @@ services:
       - ASPNETCORE_URLS=http://+:8002 
     depends_on: 
       - postgres
+      - rabbitmq
     ports:
       - "8002:8002"
     networks:
@@ -60,11 +73,27 @@ services:
       - ASPNETCORE_URLS=http://+:8003
     depends_on: 
       - postgres
+      - rabbitmq
     ports:
       - "8003:8003"
     networks:
       db :
         aliases:
           - backend-billing
+  frontend:
+    build:
+      context: .
+      dockerfile: Front/Farm.UI/Dockerfile
+      args:
+        buildno: 1
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    depends_on: 
+      - postgres
+      - backend-billing
+      - backend-animals
+      - backend-suppliers
+    ports:
+      - "80:80"
 networks:
   db:
