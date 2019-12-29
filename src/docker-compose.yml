@@ -6,13 +6,65 @@ services:
     ports:
       - "5432:5432"
     environment:
+      - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=Michelin/1 
       - POSTGRES_DB=farm
     volumes:
       - /srv/docker/postgresql:/var/lib/postgresql
+    networks:
+      db:
+        aliases:
+          - database
   backend-suppliers:
     build:
       context: .
       dockerfile: Services/Suppliers/Farm.Suppliers.WebAPI/Dockerfile
       args:
         buildno: 1
+    environment:
+      - DB_SERVER=database
+      - ASPNETCORE_URLS=http://+:8001
+    depends_on: 
+      - postgres
+    ports:
+      - "8001:8001"
+    networks:
+      db :
+        aliases:
+          - backend-suppliers
+  backend-animals:
+    build:
+      context: .
+      dockerfile: Services/Animals/Farm.Animals.WebAPI/Dockerfile
+      args:
+        buildno: 1
+    environment:
+      - DB_SERVER=database
+      - ASPNETCORE_URLS=http://+:8002 
+    depends_on: 
+      - postgres
+    ports:
+      - "8002:8002"
+    networks:
+      db :
+        aliases:
+          - backend-animals
+  backend-billing:
+    build:
+      context: .
+      dockerfile: Services/Billing/Farm.Billing.WebAPI/Dockerfile
+      args:
+        buildno: 1
+    environment:
+      - DB_SERVER=database
+      - ASPNETCORE_URLS=http://+:8003
+    depends_on: 
+      - postgres
+    ports:
+      - "8003:8003"
+    networks:
+      db :
+        aliases:
+          - backend-billing
+networks:
+  db:

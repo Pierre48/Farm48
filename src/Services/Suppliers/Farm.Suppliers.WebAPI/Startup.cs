@@ -37,8 +37,9 @@ namespace Farm.Suppliers.WebAPI
             services.AddControllers();
             services.AddTransient<ISupplierRepository,SupplierRepository>();
             services.AddDbContext<SupplierContext>(options =>
-            {
-                options.UseNpgsql(Configuration.GetValue<string>("ConnectionString"));
+            { 
+                var dbServer = Environment.GetEnvironmentVariable("DB_SERVER") ?? "127.0.0.1";
+                options.UseNpgsql($"Server={dbServer};Port=5432;Database=farm;User Id=postgres;Password=Michelin/1;");
             });
             AddSwagger(services);
             AddSwaggerGen(services);

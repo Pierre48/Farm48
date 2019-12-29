@@ -1,5 +1,5 @@
 ﻿using Farm.Infrastructure.Seedwork;
-using Farm.Suppliers.Infrastructure.AggregatesModel.SupplierAggregate;
+using Farm.Animals.Infrastructure.AggregatesModel.AnimalAggregate;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Farm.Suppliers.Infrastructure.Repositories
+namespace Farm.Animals.Infrastructure.Repositories
 {
-    public class SupplierRepository
-        : ISupplierRepository
+    public class AnimalRepository
+        : IAnimalRepository
     {
-        private readonly SupplierContext _context;
+        private readonly AnimalContext _context;
 
         public IUnitOfWork UnitOfWork
         {
@@ -22,29 +22,29 @@ namespace Farm.Suppliers.Infrastructure.Repositories
             }
         }
 
-        public SupplierRepository(SupplierContext context)
+        public AnimalRepository(AnimalContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public Supplier Add(Supplier entity)
+        public Animal Add(Animal entity)
         {
-            var existingEntity = _context.Suppliers.Find(entity.Id);
+            var existingEntity = _context.Animals.Find(entity.Id);
             if (existingEntity != null)
                 return existingEntity;
-            _context.Suppliers.Add(entity);
+            _context.Animals.Add(entity);
             return entity;
         }
 
-        public async Task<Supplier> GetAsync(int id)
+        public async Task<Animal> GetAsync(int id)
         {
             var entity = await _context
-                                .Suppliers
+                                .Animals
                                 .FirstOrDefaultAsync(o => o.Id == id);
             if (entity == null)
             {
                 entity = _context
-                            .Suppliers
+                            .Animals
                             .Local
                             .FirstOrDefault(o => o.Id == id);
             }
@@ -52,19 +52,19 @@ namespace Farm.Suppliers.Infrastructure.Repositories
             return entity;
         }
 
-        public void Update(Supplier entity)
+        public void Update(Animal entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
         }
 
-        public async Task<IEnumerable<Supplier>> GetAllAsync()
+        public async Task<IEnumerable<Animal>> GetAllAsync()
         {
-            return await _context.Suppliers.ToListAsync();
+            return await _context.Animals.ToListAsync();
         }
 
         public void Delete(int id)
         {
-            var entity = _context.Suppliers.Find(id);
+            var entity = _context.Animals.Find(id);
             if (entity != null)
             _context.Remove(entity);
         }
