@@ -12,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { AnimalsComponent } from './animals/animals.component';
 import { SuppliersComponent } from './suppliers/suppliers.component';
 import { BillingComponent } from './billing/billing.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BillingComponent } from './billing/billing.component';
       { path: 'animals', component: AnimalsComponent },
       { path: 'suppliers', component: SuppliersComponent },
       { path: 'billing', component: BillingComponent },
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

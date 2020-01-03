@@ -1,5 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-suppliers',
@@ -8,12 +10,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class SuppliersComponent {
   public suppliers: Supplier[];
-  private http : HttpClient;
-  baseUrl: string;
   
-  constructor(http: HttpClient, @Inject('SUPPLIER_URL') baseUrl: string) {
-    this.http = http;
-    this.baseUrl = baseUrl;
+  constructor(public dialog: MatDialog, public http: HttpClient, public @Inject('SUPPLIER_URL') baseUrl: string) {
+
   }
 
   ngOnInit() {
@@ -25,7 +24,14 @@ export class SuppliersComponent {
 
   }
   public add(supplier : Supplier) {
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+      width: '250px',
+      data: {supplier: supplier}
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
   public delete(supplier : Supplier) {
@@ -39,6 +45,22 @@ export class SuppliersComponent {
       this.ngOnInit();
     }, error => console.error(error));
   }
+}
+
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'dialog-overview-example-dialog.html',
+})
+export class DialogOverviewExampleDialog {
+
+  constructor(
+    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: Supplier) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
 }
 
 interface Supplier  {
