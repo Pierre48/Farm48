@@ -24,63 +24,23 @@ namespace Farm.Suppliers.WebAPI
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public IWebHostEnvironment Environment { get; }
+        public IConfiguration Configuration { get; }
+        public Startup(IConfiguration configuration,IWebHostEnvironment environment)
         {
             Configuration = configuration;
+            Environment = environment;
         }
-
-        public IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddTransient<ISupplierRepository,SupplierRepository>();
-            services.AddDbContext<SupplierContext>(options =>
-            {
-                options.UseNpgsql(Configuration.GetValue<string>("ConnectionString"));
-            });
-            AddSwagger(services);
-            AddSwaggerGen(services);
+            services.AddCustomDB(Configuration);
+            services.AddCustomServices();
+            services.AddCustomSwagger();
+            services.AddCustomSwaggerGen(Environment);
             services.AddAutoMapper(typeof(Startup).Assembly);
         }
-
-        private void AddSwaggerGen(IServiceCollection services)
-        {
-            services.AddSwaggerGen(options =>
-            {
-                var provider = services.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
-
-                foreach (var description in provider.ApiVersionDescriptions)
-                {
-                    options.SwaggerDoc(description.GroupName, new OpenApiInfo()
-                    {
-                        Title = $"{typeof(Startup).Assembly.GetCustomAttribute<System.Reflection.AssemblyProductAttribute>().Product} {description.ApiVersion}",
-                        Version = description.ApiVersion.ToString(),
-                        Description = description.IsDeprecated ? $"{typeof(Startup).Assembly.GetCustomAttribute<AssemblyDescriptionAttribute>().Description} - DEPRECATED" : typeof(Startup).Assembly.GetCustomAttribute<AssemblyDescriptionAttribute>().Description
-                    });
-                }
-
-                options.IncludeXmlComments(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), $"{typeof(Startup).Assembly.GetName().Name}.xml"));
-            });
-        }
-
-        private void AddSwagger(IServiceCollection services)
-        {
-            services.AddApiVersioning(o =>
-            {
-                o.ReportApiVersions = true;
-                o.AssumeDefaultVersionWhenUnspecified = true;
-                o.DefaultApiVersion = new ApiVersion(1, 0);
-            })
-            .AddVersionedApiExplorer(options =>
-            {
-                options.GroupNameFormat = "'v'VVV";
-                options.SubstituteApiVersionInUrl = true;
-            });
-
-        }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
         {
@@ -88,21 +48,16 @@ namespace Farm.Suppliers.WebAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
+            app.UseAuthentication();
+            app.UseCors();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-
             app.UseSwagger();
-
-
             app.UseSwaggerUI(options =>
             {
                 foreach (var description in provider.ApiVersionDescriptions)
@@ -110,8 +65,6 @@ namespace Farm.Suppliers.WebAPI
                     options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", $"{this.GetType().Assembly.GetCustomAttribute<System.Reflection.AssemblyProductAttribute>().Product} {description.GroupName.ToUpperInvariant()}");
                 }
             });
-
-
             UpdateDatabase(app);
         }
 

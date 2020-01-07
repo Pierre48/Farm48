@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_farm.93710462.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_farm.93710462.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="Front" t="Include">
         <e p="Farm.UI" t="IncludeRecursive">
@@ -91,6 +91,7 @@
             <e p="Debug" t="Include">
               <e p="netcoreapp3.1" t="Include">
                 <e p="Farm.UI.AssemblyInfo.cs" t="Include" />
+                <e p="Farm.UI.RazorAssemblyInfo.cs" t="Include" />
               </e>
             </e>
           </e>
@@ -201,7 +202,12 @@
             <e p="EntityConfigurations" t="Include">
               <e p="SupplierEntityTypeConfiguration.cs" t="Include" />
             </e>
-            <e p="Farm.Supplier.Infrastructure.csproj" t="IncludeRecursive" />
+            <e p="Farm.Suppliers.Infrastructure.csproj" t="IncludeRecursive" />
+            <e p="Migrations" t="Include">
+              <e p="20191225200421_InitialCreate.Designer.cs" t="Include" />
+              <e p="20191225200421_InitialCreate.cs" t="Include" />
+              <e p="SupplierContextModelSnapshot.cs" t="Include" />
+            </e>
             <e p="Repositories" t="Include">
               <e p="SupplierRepository.cs" t="Include" />
             </e>
@@ -221,8 +227,10 @@
               <e p="SupplierController.cs" t="Include" />
             </e>
             <e p="Dockerfile" t="Include" />
+            <e p="Extensions" t="Include">
+              <e p="ConfigurationExtensions.cs" t="Include" />
+            </e>
             <e p="Farm.Supplier.WebAPI.xml" t="Include" />
-            <e p="Farm.Suppliers.API.xml" t="Include" />
             <e p="Farm.Suppliers.WebAPI.csproj" t="IncludeRecursive" />
             <e p="Farm.Suppliers.WebAPI.xml" t="Include" />
             <e p="Models" t="Include">
@@ -233,13 +241,15 @@
               <e p="launchSettings.json" t="Include" />
             </e>
             <e p="Startup.cs" t="Include" />
+            <e p="StartupExtension.cs" t="Include" />
             <e p="appsettings.Development.json" t="Include" />
             <e p="appsettings.json" t="Include" />
             <e p="bin" t="ExcludeRecursive" />
-<<<<<<< HEAD
-            <e p="mono_crash.mem.17201.1.blob" t="Include" />
-=======
->>>>>>> 4cc0b9fad6f292d6a7e1a13c7dd86fcbd89f0297
+            <e p="mono_crash.mem.18840.1.blob" t="Include" />
+            <e p="mono_crash.mem.18984.1.blob" t="Include" />
+            <e p="mono_crash.mem.19276.1.blob" t="Include" />
+            <e p="mono_crash.mem.19454.1.blob" t="Include" />
+            <e p="mono_crash.mem.19561.1.blob" t="Include" />
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
                 <e p="netcoreapp3.1" t="Include">
