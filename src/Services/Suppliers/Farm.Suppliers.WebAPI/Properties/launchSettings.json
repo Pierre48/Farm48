@@ -24,12 +24,17 @@
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
+<<<<<<< HEAD
       }
+=======
+      },
+      "applicationUrl": "http://localhost:8001"
+>>>>>>> a6e59f7d9d074f1e5df3619dcebadb0fd5fa7445
     },
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/weatherforecast",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
       "publishAllPorts": true,
       "useSSL": true
     }

@@ -13,6 +13,82 @@
             <e p="README.md" t="Include" />
             <e p="angular.json" t="Include" />
             <e p="browserslist" t="Include" />
+            <e p="dist" t="Include">
+              <e p="assets" t="Include">
+                <e p="favicon.ico" t="Include" />
+                <e p="img" t="Include">
+                  <e p="992481.png" t="Include" />
+                  <e p="992482.png" t="Include" />
+                  <e p="992483.png" t="Include" />
+                  <e p="992484.png" t="Include" />
+                  <e p="992485.png" t="Include" />
+                  <e p="992487.png" t="Include" />
+                  <e p="992488.png" t="Include" />
+                  <e p="992489.png" t="Include" />
+                  <e p="992490.png" t="Include" />
+                  <e p="992491.png" t="Include" />
+                  <e p="992492.png" t="Include" />
+                  <e p="992493.png" t="Include" />
+                  <e p="992494.png" t="Include" />
+                  <e p="992497.png" t="Include" />
+                  <e p="992498.png" t="Include" />
+                  <e p="992499.png" t="Include" />
+                  <e p="992501.png" t="Include" />
+                  <e p="992502.png" t="Include" />
+                  <e p="992503.png" t="Include" />
+                  <e p="992504.png" t="Include" />
+                  <e p="992506.png" t="Include" />
+                  <e p="992507.png" t="Include" />
+                  <e p="992508.png" t="Include" />
+                  <e p="992509.png" t="Include" />
+                  <e p="992510.png" t="Include" />
+                  <e p="992511.png" t="Include" />
+                  <e p="992512.png" t="Include" />
+                  <e p="992514.png" t="Include" />
+                  <e p="992515.png" t="Include" />
+                  <e p="992516.png" t="Include" />
+                  <e p="992517.png" t="Include" />
+                  <e p="992519.png" t="Include" />
+                  <e p="992520.png" t="Include" />
+                  <e p="992521.png" t="Include" />
+                  <e p="992522.png" t="Include" />
+                  <e p="992523.png" t="Include" />
+                  <e p="992525.png" t="Include" />
+                  <e p="992526.png" t="Include" />
+                  <e p="992527.png" t="Include" />
+                  <e p="992528.png" t="Include" />
+                  <e p="992529.png" t="Include" />
+                  <e p="992530.png" t="Include" />
+                  <e p="992531.png" t="Include" />
+                  <e p="992533.png" t="Include" />
+                  <e p="992534.png" t="Include" />
+                  <e p="992535.png" t="Include" />
+                  <e p="992536.png" t="Include" />
+                  <e p="992537.png" t="Include" />
+                  <e p="delete.png" t="Include" />
+                  <e p="edit.png" t="Include" />
+                </e>
+              </e>
+              <e p="index.html" t="Include" />
+              <e p="main-es2015.js" t="Include" />
+              <e p="main-es2015.js.map" t="Include" />
+              <e p="main-es5.js" t="Include" />
+              <e p="main-es5.js.map" t="Include" />
+              <e p="polyfills-es2015.js" t="Include" />
+              <e p="polyfills-es2015.js.map" t="Include" />
+              <e p="polyfills-es5.js" t="Include" />
+              <e p="polyfills-es5.js.map" t="Include" />
+              <e p="runtime-es2015.js" t="Include" />
+              <e p="runtime-es2015.js.map" t="Include" />
+              <e p="runtime-es5.js" t="Include" />
+              <e p="runtime-es5.js.map" t="Include" />
+              <e p="styles.css" t="Include" />
+              <e p="styles.css.map" t="Include" />
+              <e p="vendor-es2015.js" t="Include" />
+              <e p="vendor-es2015.js.map" t="Include" />
+              <e p="vendor-es5.js" t="Include" />
+              <e p="vendor-es5.js.map" t="Include" />
+            </e>
             <e p="e2e" t="Include">
               <e p="protractor.conf.js" t="Include" />
               <e p="src" t="Include">
@@ -21,14 +97,99 @@
               </e>
               <e p="tsconfig.e2e.json" t="Include" />
             </e>
+            <e p="node_modules/@angular/animations" t="IncludeRecursive" />
+            <e p="node_modules/@angular/cli" t="IncludeRecursive" />
+            <e p="node_modules/@angular/common" t="IncludeRecursive" />
+            <e p="node_modules/@angular/compiler" t="IncludeRecursive" />
+            <e p="node_modules/@angular/compiler-cli" t="IncludeRecursive" />
+            <e p="node_modules/@angular/core" t="IncludeRecursive" />
+            <e p="node_modules/@angular/forms" t="IncludeRecursive" />
+            <e p="node_modules/@angular/platform-browser" t="IncludeRecursive" />
+            <e p="node_modules/@angular/platform-browser-dynamic" t="IncludeRecursive" />
+            <e p="node_modules/@angular/platform-server" t="IncludeRecursive" />
+            <e p="node_modules/@angular/router" t="IncludeRecursive" />
+            <e p="node_modules/@angular-devkit/architect" t="IncludeRecursive" />
+            <e p="node_modules/@angular-devkit/build-angular" t="IncludeRecursive" />
+            <e p="node_modules/@angular-devkit/build-optimizer" t="IncludeRecursive" />
+            <e p="node_modules/@angular-devkit/build-webpack" t="IncludeRecursive" />
+            <e p="node_modules/@angular-devkit/core" t="IncludeRecursive" />
+            <e p="node_modules/@angular-devkit/schematics" t="IncludeRecursive" />
+            <e p="node_modules/@ngtools/webpack" t="IncludeRecursive" />
+            <e p="node_modules/@nguniversal/module-map-ngfactory-loader" t="IncludeRecursive" />
+            <e p="node_modules/@types" t="IncludeRecursive">
+              <e p="events" t="IncludeRecursive" />
+              <e p="jasmine" t="IncludeRecursive" />
+              <e p="jasminewd2" t="IncludeRecursive" />
+              <e p="minimatch" t="IncludeRecursive" />
+              <e p="node" t="IncludeRecursive" />
+              <e p="source-list-map" t="IncludeRecursive" />
+            </e>
+            <e p="node_modules/ajv" t="IncludeRecursive" />
+            <e p="node_modules/arg" t="IncludeRecursive" />
+            <e p="node_modules/aspnet-prerendering" t="IncludeRecursive" />
+            <e p="node_modules/blocking-proxy" t="IncludeRecursive" />
+            <e p="node_modules/bootstrap" t="IncludeRecursive" />
+            <e p="node_modules/canonical-path" t="IncludeRecursive" />
+            <e p="node_modules/chokidar" t="IncludeRecursive" />
+            <e p="node_modules/codelyzer" t="IncludeRecursive" />
+            <e p="node_modules/commander" t="IncludeRecursive" />
+            <e p="node_modules/core-js" t="IncludeRecursive" />
+            <e p="node_modules/dependency-graph" t="IncludeRecursive" />
+            <e p="node_modules/domino" t="IncludeRecursive" />
+            <e p="node_modules/es6-promise" t="IncludeRecursive" />
+            <e p="node_modules/fast-deep-equal" t="IncludeRecursive" />
+            <e p="node_modules/jasmine-core" t="IncludeRecursive" />
+            <e p="node_modules/jasmine-spec-reporter" t="IncludeRecursive" />
+            <e p="node_modules/jest-worker" t="IncludeRecursive" />
+            <e p="node_modules/jquery" t="IncludeRecursive" />
+            <e p="node_modules/karma" t="IncludeRecursive" />
+            <e p="node_modules/karma-chrome-launcher" t="IncludeRecursive" />
+            <e p="node_modules/karma-coverage-istanbul-reporter" t="IncludeRecursive" />
+            <e p="node_modules/karma-jasmine" t="IncludeRecursive" />
+            <e p="node_modules/karma-jasmine-html-reporter" t="IncludeRecursive" />
+            <e p="node_modules/license-webpack-plugin" t="IncludeRecursive" />
+            <e p="node_modules/magic-string" t="IncludeRecursive" />
+            <e p="node_modules/node-sass" t="IncludeRecursive" />
+            <e p="node_modules/oidc-client" t="IncludeRecursive" />
+            <e p="node_modules/popper.js" t="IncludeRecursive" />
+            <e p="node_modules/portfinder" t="IncludeRecursive" />
+            <e p="node_modules/postcss" t="IncludeRecursive" />
+            <e p="node_modules/protractor" t="IncludeRecursive" />
+            <e p="node_modules/reflect-metadata" t="IncludeRecursive" />
+            <e p="node_modules/rxjs" t="IncludeRecursive" />
+            <e p="node_modules/source-map" t="IncludeRecursive" />
+            <e p="node_modules/sourcemap-codec" t="IncludeRecursive" />
+            <e p="node_modules/symbol-observable" t="IncludeRecursive" />
+            <e p="node_modules/terser" t="IncludeRecursive" />
+            <e p="node_modules/tree-kill" t="IncludeRecursive" />
+            <e p="node_modules/ts-node" t="IncludeRecursive" />
+            <e p="node_modules/tslib" t="IncludeRecursive" />
+            <e p="node_modules/tslint" t="IncludeRecursive" />
+            <e p="node_modules/upath" t="IncludeRecursive" />
+            <e p="node_modules/uri-js" t="IncludeRecursive" />
+            <e p="node_modules/webdriver-js-extender" t="IncludeRecursive" />
+            <e p="node_modules/worker-farm" t="IncludeRecursive" />
+            <e p="node_modules/zone.js" t="IncludeRecursive" />
             <e p="package-lock.json" t="Include" />
             <e p="package.json" t="Include" />
             <e p="src" t="Include">
               <e p="app" t="Include">
+                <e p="animals" t="Include">
+                  <e p="animals.component.css" t="Include" />
+                  <e p="animals.component.html" t="Include" />
+                  <e p="animals.component.spec.ts" t="Include" />
+                  <e p="animals.component.ts" t="Include" />
+                </e>
                 <e p="app.component.html" t="Include" />
                 <e p="app.component.ts" t="Include" />
                 <e p="app.module.ts" t="Include" />
                 <e p="app.server.module.ts" t="Include" />
+                <e p="billing" t="Include">
+                  <e p="billing.component.css" t="Include" />
+                  <e p="billing.component.html" t="Include" />
+                  <e p="billing.component.spec.ts" t="Include" />
+                  <e p="billing.component.ts" t="Include" />
+                </e>
                 <e p="counter" t="Include">
                   <e p="counter.component.html" t="Include" />
                   <e p="counter.component.spec.ts" t="Include" />
@@ -47,9 +208,68 @@
                   <e p="nav-menu.component.html" t="Include" />
                   <e p="nav-menu.component.ts" t="Include" />
                 </e>
+                <e p="suppliers" t="Include">
+                  <e p="suppliers.component.css" t="Include" />
+                  <e p="suppliers.component.html" t="Include" />
+                  <e p="suppliers.component.spec.ts" t="Include" />
+                  <e p="suppliers.component.ts" t="Include" />
+                </e>
               </e>
               <e p="assets" t="Include">
                 <e p=".gitkeep" t="Include" />
+                <e p="favicon.ico" t="Include" />
+                <e p="img" t="Include">
+                  <e p="992481.png" t="Include" />
+                  <e p="992482.png" t="Include" />
+                  <e p="992483.png" t="Include" />
+                  <e p="992484.png" t="Include" />
+                  <e p="992485.png" t="Include" />
+                  <e p="992487.png" t="Include" />
+                  <e p="992488.png" t="Include" />
+                  <e p="992489.png" t="Include" />
+                  <e p="992490.png" t="Include" />
+                  <e p="992491.png" t="Include" />
+                  <e p="992492.png" t="Include" />
+                  <e p="992493.png" t="Include" />
+                  <e p="992494.png" t="Include" />
+                  <e p="992497.png" t="Include" />
+                  <e p="992498.png" t="Include" />
+                  <e p="992499.png" t="Include" />
+                  <e p="992501.png" t="Include" />
+                  <e p="992502.png" t="Include" />
+                  <e p="992503.png" t="Include" />
+                  <e p="992504.png" t="Include" />
+                  <e p="992506.png" t="Include" />
+                  <e p="992507.png" t="Include" />
+                  <e p="992508.png" t="Include" />
+                  <e p="992509.png" t="Include" />
+                  <e p="992510.png" t="Include" />
+                  <e p="992511.png" t="Include" />
+                  <e p="992512.png" t="Include" />
+                  <e p="992514.png" t="Include" />
+                  <e p="992515.png" t="Include" />
+                  <e p="992516.png" t="Include" />
+                  <e p="992517.png" t="Include" />
+                  <e p="992519.png" t="Include" />
+                  <e p="992520.png" t="Include" />
+                  <e p="992521.png" t="Include" />
+                  <e p="992522.png" t="Include" />
+                  <e p="992523.png" t="Include" />
+                  <e p="992525.png" t="Include" />
+                  <e p="992526.png" t="Include" />
+                  <e p="992527.png" t="Include" />
+                  <e p="992528.png" t="Include" />
+                  <e p="992529.png" t="Include" />
+                  <e p="992530.png" t="Include" />
+                  <e p="992531.png" t="Include" />
+                  <e p="992533.png" t="Include" />
+                  <e p="992534.png" t="Include" />
+                  <e p="992535.png" t="Include" />
+                  <e p="992536.png" t="Include" />
+                  <e p="992537.png" t="Include" />
+                  <e p="delete.png" t="Include" />
+                  <e p="edit.png" t="Include" />
+                </e>
               </e>
               <e p="environments" t="Include">
                 <e p="environment.prod.ts" t="Include" />
@@ -72,6 +292,7 @@
           <e p="Controllers" t="Include">
             <e p="WeatherForecastController.cs" t="Include" />
           </e>
+          <e p="Dockerfile" t="Include" />
           <e p="Farm.UI.csproj" t="IncludeRecursive" />
           <e p="Pages" t="Include">
             <e p="Error.cshtml" t="Include" />
@@ -95,9 +316,6 @@
               </e>
             </e>
           </e>
-          <e p="wwwroot" t="Include">
-            <e p="favicon.ico" t="Include" />
-          </e>
         </e>
       </e>
       <e p="Infrastructure" t="Include">
@@ -120,37 +338,62 @@
         </e>
       </e>
       <e p="Services" t="Include">
-        <e p="Animal" t="Include" />
-        <e p="Animals/Farm.Animal.Infrastructure" t="IncludeRecursive">
-          <e p="Class1.cs" t="Include" />
-          <e p="Farm.Animal.Infrastructure.csproj" t="IncludeRecursive" />
-          <e p="bin" t="ExcludeRecursive" />
-          <e p="obj" t="ExcludeRecursive">
-            <e p="Debug" t="Include">
-              <e p="netstandard2.0" t="Include">
-                <e p="Farm.Animal.Infrastructure.AssemblyInfo.cs" t="Include" />
+        <e p="Animals" t="Include">
+          <e p="Farm.Animals.Infrastructure" t="IncludeRecursive">
+            <e p="AggregatesModel" t="Include">
+              <e p="AnimalAggregate" t="Include">
+                <e p="Animal.cs" t="Include" />
+                <e p="AnimalType.cs" t="Include" />
+                <e p="Gender.cs" t="Include" />
+                <e p="ISupplierRepository.cs" t="Include" />
+              </e>
+            </e>
+            <e p="AnimalContext.cs" t="Include" />
+            <e p="EntityConfigurations" t="Include">
+              <e p="AnimalEntityTypeConfiguration.cs" t="Include" />
+            </e>
+            <e p="Farm.Animals.Infrastructure.csproj" t="IncludeRecursive" />
+            <e p="Migrations" t="Include">
+              <e p="20191229184656_InitialCreate.Designer.cs" t="Include" />
+              <e p="20191229184656_InitialCreate.cs" t="Include" />
+              <e p="AnimalContextModelSnapshot.cs" t="Include" />
+            </e>
+            <e p="Repositories" t="Include">
+              <e p="AnimalRepository.cs" t="Include" />
+            </e>
+            <e p="bin" t="ExcludeRecursive" />
+            <e p="obj" t="ExcludeRecursive">
+              <e p="Debug" t="Include">
+                <e p="netcoreapp3.1" t="Include">
+                  <e p="Farm.Animals.Infrastructure.AssemblyInfo.cs" t="Include" />
+                </e>
               </e>
             </e>
           </e>
-        </e>
-        <e p="Animals/Farm.Animal.WebAPI" t="IncludeRecursive">
-          <e p="Controllers" t="Include">
-            <e p="WeatherForecastController.cs" t="Include" />
-          </e>
-          <e p="Farm.Animal.WebAPI.csproj" t="IncludeRecursive" />
-          <e p="Program.cs" t="Include" />
-          <e p="Properties" t="Include">
-            <e p="launchSettings.json" t="Include" />
-          </e>
-          <e p="Startup.cs" t="Include" />
-          <e p="WeatherForecast.cs" t="Include" />
-          <e p="appsettings.Development.json" t="Include" />
-          <e p="appsettings.json" t="Include" />
-          <e p="bin" t="ExcludeRecursive" />
-          <e p="obj" t="ExcludeRecursive">
-            <e p="Debug" t="Include">
-              <e p="netcoreapp3.1" t="Include">
-                <e p="Farm.Animal.WebAPI.AssemblyInfo.cs" t="Include" />
+          <e p="Farm.Animals.WebAPI" t="IncludeRecursive">
+            <e p="AutoMapperProfile.cs" t="Include" />
+            <e p="Controllers" t="Include">
+              <e p="AnimalController.cs" t="Include" />
+            </e>
+            <e p="Dockerfile" t="Include" />
+            <e p="Farm.Animals.WebAPI.csproj" t="IncludeRecursive" />
+            <e p="Farm.Animals.WebAPI.xml" t="Include" />
+            <e p="Models" t="Include">
+              <e p="AnimalModel.cs" t="Include" />
+            </e>
+            <e p="Program.cs" t="Include" />
+            <e p="Properties" t="Include">
+              <e p="launchSettings.json" t="Include" />
+            </e>
+            <e p="Startup.cs" t="Include" />
+            <e p="appsettings.Development.json" t="Include" />
+            <e p="appsettings.json" t="Include" />
+            <e p="bin" t="ExcludeRecursive" />
+            <e p="obj" t="ExcludeRecursive">
+              <e p="Debug" t="Include">
+                <e p="netcoreapp3.1" t="Include">
+                  <e p="Farm.Animals.WebAPI.AssemblyInfo.cs" t="Include" />
+                </e>
               </e>
             </e>
           </e>
@@ -172,6 +415,7 @@
             <e p="Controllers" t="Include">
               <e p="WeatherForecastController.cs" t="Include" />
             </e>
+            <e p="Dockerfile" t="Include" />
             <e p="Farm.Billing.WebAPI.csproj" t="IncludeRecursive" />
             <e p="Program.cs" t="Include" />
             <e p="Properties" t="Include">
@@ -245,11 +489,6 @@
             <e p="appsettings.Development.json" t="Include" />
             <e p="appsettings.json" t="Include" />
             <e p="bin" t="ExcludeRecursive" />
-            <e p="mono_crash.mem.18840.1.blob" t="Include" />
-            <e p="mono_crash.mem.18984.1.blob" t="Include" />
-            <e p="mono_crash.mem.19276.1.blob" t="Include" />
-            <e p="mono_crash.mem.19454.1.blob" t="Include" />
-            <e p="mono_crash.mem.19561.1.blob" t="Include" />
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
                 <e p="netcoreapp3.1" t="Include">

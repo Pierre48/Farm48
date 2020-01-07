@@ -27,34 +27,34 @@ namespace Farm.Suppliers.Infrastructure.Repositories
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public Supplier Add(Supplier supplier)
+        public Supplier Add(Supplier entity)
         {
-            var existingSupplier = _context.Suppliers.Find(supplier.Id);
-            if (existingSupplier != null)
-                return existingSupplier;
-            _context.Suppliers.Add(supplier);
-            return supplier;
+            var existingEntity = _context.Suppliers.Find(entity.Id);
+            if (existingEntity != null)
+                return existingEntity;
+            _context.Suppliers.Add(entity);
+            return entity;
         }
 
-        public async Task<Supplier> GetAsync(int SupplierId)
+        public async Task<Supplier> GetAsync(int id)
         {
-            var Supplier = await _context
+            var entity = await _context
                                 .Suppliers
-                                .FirstOrDefaultAsync(o => o.Id == SupplierId);
-            if (Supplier == null)
+                                .FirstOrDefaultAsync(o => o.Id == id);
+            if (entity == null)
             {
-                Supplier = _context
+                entity = _context
                             .Suppliers
                             .Local
-                            .FirstOrDefault(o => o.Id == SupplierId);
+                            .FirstOrDefault(o => o.Id == id);
             }
 
-            return Supplier;
+            return entity;
         }
 
-        public void Update(Supplier Supplier)
+        public void Update(Supplier entity)
         {
-            _context.Entry(Supplier).State = EntityState.Modified;
+            _context.Entry(entity).State = EntityState.Modified;
         }
 
         public async Task<IEnumerable<Supplier>> GetAllAsync()
@@ -64,7 +64,8 @@ namespace Farm.Suppliers.Infrastructure.Repositories
 
         public void Delete(int id)
         {
-            var entity = _context.FindAsync<Supplier>(id);
+            var entity = _context.Suppliers.Find(id);
+            if (entity != null)
             _context.Remove(entity);
         }
     }
