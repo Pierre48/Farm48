@@ -1,6 +1,6 @@
-version: "3.7"
+version: "2.2"
 services:
-  postgres:
+  farm-db:
     restart: always
     image: postgres
     ports:
@@ -15,7 +15,7 @@ services:
       db:
         aliases:
           - database
-  rabbitmq:
+  farm-rabbitmq:
     image: "rabbitmq:3-management"
     ports:
       - "15672:15672"
@@ -26,7 +26,7 @@ services:
       db:
         aliases:
           - rabbitmq
-  backend-suppliers:
+  farm-suppliers:
     build:
       context: .
       dockerfile: Services/Suppliers/Farm.Suppliers.WebAPI/Dockerfile
@@ -36,15 +36,15 @@ services:
       - DB_SERVER=database
       - ASPNETCORE_URLS=http://+:8001
     depends_on: 
-      - postgres
-      - rabbitmq
+      - farm-db
+      - farm-rabbitmq
     ports:
       - "8001:8001"
     networks:
       db :
         aliases:
           - backend-suppliers
-  backend-animals:
+  farm-animals:
     build:
       context: .
       dockerfile: Services/Animals/Farm.Animals.WebAPI/Dockerfile
@@ -54,15 +54,15 @@ services:
       - DB_SERVER=database
       - ASPNETCORE_URLS=http://+:8002 
     depends_on: 
-      - postgres
-      - rabbitmq
+      - farm-db
+      - farm-rabbitmq
     ports:
       - "8002:8002"
     networks:
       db :
         aliases:
           - backend-animals
-  backend-billing:
+  farm-billing:
     build:
       context: .
       dockerfile: Services/Billing/Farm.Billing.WebAPI/Dockerfile
@@ -72,8 +72,8 @@ services:
       - DB_SERVER=database
       - ASPNETCORE_URLS=http://+:8003
     depends_on: 
-      - postgres
-      - rabbitmq
+      - farm-db
+      - farm-rabbitmq
     ports:
       - "8003:8003"
     networks:
@@ -89,10 +89,10 @@ services:
     environment:
       - ASPNETCORE_URLS=http://+:80
     depends_on: 
-      - postgres
-      - backend-billing
-      - backend-animals
-      - backend-suppliers
+      - farm-db
+      - farm-billing
+      - farm-animals
+      - farm-suppliers
     ports:
       - "80:80"
 networks:

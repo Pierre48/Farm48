@@ -35,78 +35,14 @@ namespace Farm.Suppliers.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-<<<<<<< HEAD
             services.AddCustomDB(Configuration);
             services.AddCustomServices();
             services.AddCustomSwagger();
             services.AddCustomSwaggerGen(Environment);
             services.AddAutoMapper(typeof(Startup).Assembly);
         }
-=======
-            services.AddTransient<ISupplierRepository,SupplierRepository>();
-            services.AddDbContext<SupplierContext>(options =>
-            { 
-                var dbServer = Environment.GetEnvironmentVariable("DB_SERVER") ?? "127.0.0.1";
-                options.UseNpgsql($"Server={dbServer};Port=5432;Database=farm;User Id=postgres;Password=Michelin/1;");
-            });
-            AddCors(services);
-            AddSwagger(services);
-            AddSwaggerGen(services);
-            services.AddAutoMapper(typeof(Startup).Assembly);
-        }
 
-        private void AddCors(IServiceCollection services)
-        {
-            services.AddCors(options =>
-            {
-                options.AddPolicy("FrontOrigins",
-                    builder =>
-                    {
-                        builder
-                            .WithOrigins("http://127.0.0.1:4200", "http://localhost:4200")
-                            .AllowAnyMethod()
-                            .AllowAnyHeader();
-                    });
-            });
-        }
-
-        private void AddSwaggerGen(IServiceCollection services)
-        {
-            services.AddSwaggerGen(options =>
-            {
-                var provider = services.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
-
-                foreach (var description in provider.ApiVersionDescriptions)
-                {
-                    options.SwaggerDoc(description.GroupName, new OpenApiInfo()
-                    {
-                        Title = $"{typeof(Startup).Assembly.GetCustomAttribute<System.Reflection.AssemblyProductAttribute>().Product} {description.ApiVersion}",
-                        Version = description.ApiVersion.ToString(),
-                        Description = description.IsDeprecated ? $"{typeof(Startup).Assembly.GetCustomAttribute<AssemblyDescriptionAttribute>().Description} - DEPRECATED" : typeof(Startup).Assembly.GetCustomAttribute<AssemblyDescriptionAttribute>().Description
-                    });
-                }
-
-                options.IncludeXmlComments(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), $"{typeof(Startup).Assembly.GetName().Name}.xml"));
-            });
-        }
-
-        private void AddSwagger(IServiceCollection services)
-        {
-            services.AddApiVersioning(o =>
-            {
-                o.ReportApiVersions = true;
-                o.AssumeDefaultVersionWhenUnspecified = true;
-                o.DefaultApiVersion = new ApiVersion(1, 0);
-            })
-            .AddVersionedApiExplorer(options =>
-            {
-                options.GroupNameFormat = "'v'VVV";
-                options.SubstituteApiVersionInUrl = true;
-            });
-
-        }
-
->>>>>>> a6e59f7d9d074f1e5df3619dcebadb0fd5fa7445
+        
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
         {
@@ -116,12 +52,7 @@ namespace Farm.Suppliers.WebAPI
             }
             app.UseHttpsRedirection();
             app.UseRouting();
-<<<<<<< HEAD
-=======
-
             app.UseCors("FrontOrigins");
-            
->>>>>>> a6e59f7d9d074f1e5df3619dcebadb0fd5fa7445
             app.UseAuthorization();
             app.UseAuthentication();
             app.UseCors();

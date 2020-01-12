@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  farm.ui.react:
+    image: farm.ui.react
+    build: .
+    ports:
+      - 3000:3000
