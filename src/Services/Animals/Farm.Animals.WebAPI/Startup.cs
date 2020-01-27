@@ -39,7 +39,7 @@ namespace Farm.Animals.WebAPI
             services.AddDbContext<AnimalContext>(options =>
             { 
                 var dbServer = Environment.GetEnvironmentVariable("DB_SERVER") ?? "127.0.0.1";
-                options.UseNpgsql($"Server={dbServer};Port=5432;Database=farm;User Id=postgres;Password=Michelin/1;");
+                options.UseNpgsql($"Server={dbServer};Port=5432;Database=farm;User Id=postgres;Password=Monaco/1;");
             });
             AddCors(services);
             AddSwagger(services);
